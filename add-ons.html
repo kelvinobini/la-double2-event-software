@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add-ons — LA Double2 Event Software</title>
+<meta name="description" content="What comes with every LA Double2 account — e-signature, multi-language documents, 24/7 booking — plus the optional AI assistant.">
+<meta name="theme-color" content="#0E7A52">
+<link rel="canonical" href="https://ladouble2.com/add-ons.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Add-ons — LA Double2 Event Software">
+<meta property="og:description" content="What comes with every LA Double2 account — e-signature, multi-language documents, 24/7 booking — plus the optional AI assistant.">
+<meta property="og:url" content="https://ladouble2.com/add-ons.html">
+<meta property="og:site_name" content="LA Double2 Event Software">
+<meta property="og:image" content="https://ladouble2.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Add-ons — LA Double2 Event Software">
+<meta name="twitter:description" content="What comes with every LA Double2 account — e-signature, multi-language documents, 24/7 booking — plus the optional AI assistant.">
+<meta name="twitter:image" content="https://ladouble2.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --green:#0E7A52;
+    --green-hover:#0A5C3E;
+    --bg:#FAF8F5;
+    --bg-alt:#FFFFFF;
+    --text:#12211B;
+    --muted:#5C6B64;
+    --border:#E5E0D8;
+    --accent:#E0A340;
+    --radius-sm:12px;
+    --radius-lg:16px;
+    --shadow:0 4px 24px rgba(18,33,27,0.06);
+    --shadow-lg:0 12px 40px rgba(18,33,27,0.10);
+    --max:1200px;
+    --on-green:#FFFFFF;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#12211B;
+      --bg-alt:#182920;
+      --text:#F2EFE9;
+      --muted:#A9B7AE;
+      --border:#2A3D33;
+      --green:#22A473;
+      --green-hover:#2FC189;
+      --accent:#E8B968;
+      --shadow:0 4px 24px rgba(0,0,0,0.35);
+      --shadow-lg:0 12px 40px rgba(0,0,0,0.45);
+      --on-green:#0A160F;
+      color-scheme:dark;
+    }
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  [id]{scroll-margin-top:88px;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.font-head{
+    font-family:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.15;
+    margin:0;
+    font-weight:800;
+  }
+  p{margin:0;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font:inherit;}
+
+  .skip-link{
+    position:absolute;left:-9999px;top:0;background:var(--green);color:var(--on-green);
+    padding:12px 20px;border-radius:0 0 8px 0;z-index:1000;
+  }
+  .skip-link:focus{left:0;}
+
+  :focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  @media (max-width:768px){ section{padding:64px 0;} }
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--accent);
+  }
+  .section-head{max-width:640px;margin-bottom:48px;}
+  .section-head h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-top:12px;}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:1.05rem;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;
+    text-decoration:none;border:2px solid transparent;cursor:pointer;
+    transition:background 0.2s ease,border-color 0.2s ease,color 0.2s ease,transform 0.2s ease;
+    white-space:nowrap;
+  }
+  .btn-solid{background:var(--green);color:var(--on-green);}
+  .btn-solid:hover{background:var(--green-hover);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;border-color:var(--border);color:var(--text);}
+  .btn-ghost:hover{border-color:var(--green);color:var(--green);}
+  .btn-lg{padding:16px 30px;font-size:1rem;}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:100;background:color-mix(in srgb, var(--bg-alt) 92%, transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--border);
+  }
+  .header-inner{
+    max-width:var(--max);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  .logo{font-family:"Plus Jakarta Sans";font-weight:800;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .logo .mark{width:30px;height:30px;border-radius:8px;background:var(--green);display:inline-flex;align-items:center;justify-content:center;color:var(--on-green);font-size:0.95rem;font-weight:800;flex:none;}
+  nav.primary{display:flex;align-items:center;gap:32px;}
+  nav.primary a{text-decoration:none;font-weight:600;font-size:0.92rem;color:var(--text);}
+  nav.primary a:hover{color:var(--green);}
+  nav.primary a[aria-current="page"]{color:var(--green);}
+  .header-actions{display:flex;align-items:center;gap:12px;}
+  .lang-switch{
+    display:flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--border);
+    border-radius:8px;padding:8px 10px;font-size:0.85rem;font-weight:600;color:var(--muted);cursor:pointer;
+  }
+  .hamburger{display:none;background:transparent;border:1px solid var(--border);border-radius:8px;padding:8px;cursor:pointer;}
+  .hamburger svg{display:block;}
+
+  @media (max-width:900px){
+    nav.primary{display:none;}
+    .header-actions .btn-ghost{display:none;}
+    .hamburger{display:inline-flex;}
+  }
+
+  .mobile-drawer{
+    position:fixed;inset:0;background:var(--bg-alt);z-index:200;
+    display:flex;flex-direction:column;padding:20px 24px;
+    transform:translateX(100%);transition:transform 0.25s ease;
+  }
+  .mobile-drawer.open{transform:translateX(0);}
+  .mobile-drawer .drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
+  .mobile-drawer nav{display:flex;flex-direction:column;gap:22px;margin-bottom:32px;}
+  .mobile-drawer nav a{font-size:1.3rem;font-weight:700;text-decoration:none;color:var(--text);}
+  .mobile-drawer .drawer-actions{display:flex;flex-direction:column;gap:12px;margin-top:auto;}
+  .close-drawer{background:transparent;border:1px solid var(--border);border-radius:8px;padding:8px;cursor:pointer;}
+
+  /* Page hero */
+  .page-hero{padding-top:72px;padding-bottom:48px;position:relative;overflow:hidden;}
+  .page-hero::before{
+    content:"";position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:800px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,color-mix(in srgb, var(--green) 14%, transparent),transparent 70%);
+    pointer-events:none;
+  }
+  .page-hero .wrap{max-width:760px;text-align:center;position:relative;}
+  .page-hero h1{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-top:14px;}
+  .page-hero p.sub{margin-top:18px;font-size:1.08rem;color:var(--muted);}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-size:0.9rem;font-weight:700;color:var(--muted);text-decoration:none;margin-bottom:18px;}
+  .back-link:hover{color:var(--green);}
+  .page-hero .hero-ctas{justify-content:center;margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* Jump nav */
+  .jump-nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:32px;}
+  .jump-nav a{
+    padding:10px 18px;border-radius:24px;border:1px solid var(--border);background:var(--bg-alt);
+    font-weight:700;font-size:0.88rem;text-decoration:none;color:var(--text);
+    transition:border-color 0.2s ease,color 0.2s ease;
+  }
+  .jump-nav a:hover{border-color:var(--green);color:var(--green);}
+
+  /* Feature groups (reused for add-on groups) */
+  .feature-group{padding:64px 0;}
+  .feature-group:not(:last-child){border-bottom:1px solid var(--border);}
+  .group-head{max-width:640px;margin:0 auto 40px;text-align:center;}
+  .group-head .group-label{font-weight:800;color:var(--green);font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;}
+  .group-head h2{margin-top:10px;font-size:clamp(1.7rem,3.2vw,2.3rem);}
+  .group-head p{margin-top:12px;color:var(--muted);}
+
+  .deep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  @media (max-width:960px){ .deep-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:640px){ .deep-grid{grid-template-columns:1fr;} }
+  .deep-card{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow);}
+  .deep-card .icon-wrap{width:44px;height:44px;border-radius:10px;background:color-mix(in srgb, var(--green) 14%, transparent);display:flex;align-items:center;justify-content:center;color:var(--green);margin-bottom:16px;}
+  .deep-card h3{font-size:clamp(1.1rem,1.8vw,1.3rem);}
+
+  .bullet-list{margin-top:16px;display:flex;flex-direction:column;gap:11px;}
+  .bullet-list li{display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;color:var(--text);}
+  .bullet-list svg{flex:none;margin-top:3px;color:var(--green);}
+
+  /* Two column deep dives (AI assistant) */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  @media (max-width:840px){ .split{grid-template-columns:1fr;} }
+  .split .eyebrow{margin-bottom:12px;}
+  .split h2{font-size:clamp(1.6rem,3vw,2.2rem);}
+  .split p.lead{margin-top:14px;color:var(--muted);font-size:1.02rem;}
+  .split .bullet-list{margin-top:22px;gap:14px;}
+  .split .bullet-list li{font-size:0.98rem;}
+  .split .bullet-list svg{width:18px;height:18px;}
+
+  /* AI assistant panel */
+  .ai-panel{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);overflow:hidden;}
+  .ai-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--border);}
+  .live-dot{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:0.85rem;}
+  .live-dot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
+  .ai-panel-body{padding:20px 22px;}
+  .ai-email-preview{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .ai-email-preview .to-line{font-size:0.78rem;color:var(--muted);}
+  .ai-email-preview .subject{font-weight:700;margin-top:6px;font-size:0.95rem;}
+  .ai-email-preview .body-text{margin-top:8px;font-size:0.88rem;color:var(--muted);}
+  .ai-email-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+  .ai-email-actions button{padding:8px 14px;font-size:0.82rem;border-radius:8px;font-weight:700;border:1px solid var(--border);background:var(--bg-alt);cursor:pointer;}
+  .ai-email-actions button.primary{background:var(--green);color:var(--on-green);border-color:var(--green);}
+  .ai-brief{margin-top:20px;}
+  .ai-brief h5{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);margin-bottom:10px;}
+  .ai-brief ul{display:flex;flex-direction:column;gap:10px;}
+  .ai-brief li{display:flex;gap:10px;font-size:0.86rem;align-items:flex-start;}
+  .ai-brief li svg{flex:none;margin-top:2px;color:var(--accent);}
+
+  /* Closing CTA */
+  .closing-cta{background:var(--green);color:var(--on-green);text-align:center;}
+  .closing-cta h2{font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--on-green);}
+  .closing-cta p{margin-top:14px;color:color-mix(in srgb, var(--on-green) 85%, transparent);font-size:1.05rem;}
+  .closing-cta .hero-ctas{justify-content:center;margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .closing-cta .btn-ghost{border-color:color-mix(in srgb, var(--on-green) 50%, transparent);color:var(--on-green);}
+  .closing-cta .btn-ghost:hover{border-color:var(--on-green);background:color-mix(in srgb, var(--on-green) 12%, transparent);}
+  .closing-cta .btn-solid{background:var(--on-green);color:var(--green);}
+  .closing-cta .btn-solid:hover{background:color-mix(in srgb, var(--on-green) 88%, transparent);}
+
+  /* Footer */
+  footer.site{background:var(--bg-alt);border-top:1px solid var(--border);padding:72px 0 32px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr repeat(5,1fr);gap:32px;}
+  @media (max-width:900px){ .footer-grid{grid-template-columns:1fr 1fr 1fr;} }
+  @media (max-width:600px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+  .footer-brand p{color:var(--muted);font-size:0.88rem;margin-top:12px;max-width:32ch;}
+  .footer-brand address{font-style:normal;color:var(--muted);font-size:0.82rem;margin-top:10px;max-width:32ch;line-height:1.6;}
+  .footer-brand address a{color:var(--text);text-decoration:none;}
+  .footer-brand address a:hover{color:var(--green);}
+  .footer-col h5{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);margin-bottom:14px;}
+  .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+  .footer-col a{text-decoration:none;font-size:0.9rem;color:var(--text);}
+  .footer-col a:hover{color:var(--green);}
+  .footer-bottom{margin-top:56px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:0.82rem;text-align:center;}
+
+  /* Scroll reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.35s ease,transform 0.35s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="mark" aria-hidden="true">L2</span>
+      LA Double2
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="add-ons.html" aria-current="page">Add-ons</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-switch" type="button" aria-haspopup="listbox" aria-label="Change language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>
+        EN
+      </button>
+      <a class="btn btn-solid" href="contact.html">Get started</a>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer" id="hamburger-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile menu">
+  <div class="drawer-top">
+    <a class="logo" href="index.html"><span class="mark" aria-hidden="true">L2</span>LA Double2</a>
+    <button class="close-drawer" type="button" aria-label="Close menu" id="close-drawer-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile primary">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="add-ons.html">Add-ons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="drawer-actions">
+    <a class="btn btn-solid" href="contact.html">Get started</a>
+  </div>
+</div>
+
+<main id="main">
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="back-link" href="index.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        Back to overview
+      </a>
+      <span class="eyebrow">Add-ons</span>
+      <h1>Extra capability, already switched on</h1>
+      <p class="sub">Three things come with every account. One more is optional: an AI assistant that works your open bookings for you.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid btn-lg" href="contact.html">Get started</a>
+      </div>
+      <nav class="jump-nav" aria-label="Add-on groups">
+        <a href="#included">Included with your account</a>
+        <a href="#ai-assistant">AI assistant</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- GROUP: INCLUDED -->
+  <section class="feature-group" id="included">
+    <div class="wrap">
+      <div class="group-head">
+        <span class="group-label">Included with your account</span>
+        <h2>No separate charge, no separate setup</h2>
+        <p>These three run underneath the modules you already use — nothing extra to switch on.</p>
+      </div>
+      <div class="deep-grid">
+        <div class="deep-card reveal" id="esignature">
+          <div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div>
+          <h3>Built-in e-signature</h3>
+          <ul class="bullet-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>No per-signature or per-document fee, on any contract</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Track sent, opened and signed status in real time</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>A signed contract converts straight into an invoice</li>
+          </ul>
+        </div>
+        <div class="deep-card reveal" id="languages">
+          <div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg></div>
+          <h3>Multi-language documents</h3>
+          <ul class="bullet-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>English is the default, with Igbo, Yoruba and Hausa available</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Set per document, so each client gets their own copy</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Proposals, contracts and invoices all support it</li>
+          </ul>
+        </div>
+        <div class="deep-card reveal" id="booking-form">
+          <div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+          <h3>24/7 online booking form</h3>
+          <ul class="bullet-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>A public enquiry form lands as a real event, any hour</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Creates the customer record automatically, no re-entry</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Shows straight on the calendar as a tentative hold</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROUP: AI ASSISTANT -->
+  <section class="feature-group" id="ai-assistant" style="border-bottom:none;">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="group-label">Optional</span>
+        <h2>An AI assistant that watches your open bookings</h2>
+        <p class="lead">It reads your calendar and customer records, then drafts the work — you decide what actually sends.</p>
+        <ul class="bullet-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Flags leads and proposals that have gone quiet, with a suggested next step</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Drafts follow-up emails in your voice, ready to send or edit</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Sends automatic status notifications to clients and staff</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Every draft waits for your approval before anything goes out</li>
+        </ul>
+      </div>
+      <div class="ai-panel reveal">
+        <div class="ai-panel-head">
+          <span class="live-dot">Live · 6 actions today</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6z"/></svg>
+        </div>
+        <div class="ai-panel-body">
+          <div class="ai-email-preview">
+            <div class="to-line">To: bola@brightoccasions.example</div>
+            <div class="subject">Following up on your Nov 8 proposal</div>
+            <div class="body-text">Hi Bola, wanted to check in on the proposal we sent last week — happy to adjust the headcount or menu if plans have shifted...</div>
+          </div>
+          <div class="ai-email-actions">
+            <button class="primary" type="button">Send</button>
+            <button type="button">Edit</button>
+            <button type="button">Adjust tone</button>
+          </div>
+          <div class="ai-brief">
+            <h5>Today's brief</h5>
+            <ul>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>3 proposals open more than 4 days with no reply</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>Deposit reminder due for the Adeyemi event tomorrow</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>Staffing notice sent to 4 crew for Saturday's event</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>Client confirmation sent for a menu change on Nov 2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing-cta">
+    <div class="wrap">
+      <h2>Run your next event on one app</h2>
+      <p>Bring your own menus and packages, or ask us to help set them up.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid btn-lg" href="contact.html">Get started</a>
+        <a class="btn btn-ghost btn-lg" href="features.html">See all features</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><span class="mark" aria-hidden="true">L2</span>LA Double2</a>
+        <p>Catering and event management software for teams that run events, not enterprise software rollouts.</p>
+        <address>#1 Magodo Isheri Road, Magodo Phase 1, Lagos, Nigeria<br><a href="tel:+2348039132194">0803 913 2194</a></address>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="features.html">All features</a></li>
+          <li><a href="features.html#customers">Customers</a></li>
+          <li><a href="features.html#calendar">Event calendar</a></li>
+          <li><a href="features.html#proposals">Proposals</a></li>
+          <li><a href="features.html#contracts-invoices">Contracts &amp; invoices</a></li>
+          <li><a href="features.html#payments">Payments</a></li>
+          <li><a href="features.html#beo">BEOs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="index.html#faq">Help centre</a></li>
+          <li><a href="index.html#faq">BEO templates</a></li>
+          <li><a href="index.html#faq">Data export</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Compare</h5>
+        <ul>
+          <li><a href="index.html#faq">Vs. spreadsheets</a></li>
+          <li><a href="index.html#faq">Vs. enterprise platforms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="index.html#top">Caterers</a></li>
+          <li><a href="index.html#top">Banquet halls</a></li>
+          <li><a href="index.html#top">Hotels</a></li>
+          <li><a href="index.html#top">Restaurants &amp; clubs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 LA Double2 Event Software. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    // Mobile drawer
+    var hamburger = document.getElementById('hamburger-btn');
+    var drawer = document.getElementById('mobile-drawer');
+    var closeBtn = document.getElementById('close-drawer-btn');
+    function openDrawer(){
+      drawer.classList.add('open');
+      hamburger.setAttribute('aria-expanded','true');
+      var firstLink = drawer.querySelector('a, button');
+      if(firstLink) firstLink.focus();
+    }
+    function closeDrawer(){
+      drawer.classList.remove('open');
+      hamburger.setAttribute('aria-expanded','false');
+      hamburger.focus();
+    }
+    if(hamburger){ hamburger.addEventListener('click', openDrawer); }
+    if(closeBtn){ closeBtn.addEventListener('click', closeDrawer); }
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && drawer.classList.contains('open')){ closeDrawer(); }
+    });
+
+    // Scroll reveal
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if(reduceMotion || !('IntersectionObserver' in window)){
+      items.forEach(function(el){ el.classList.add('in-view'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      items.forEach(function(el){ io.observe(el); });
+    }
+  })();
+</script>
+
+</body>
+</html>
