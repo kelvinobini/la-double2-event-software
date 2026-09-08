@@ -1,0 +1,9 @@
+{
+  "name": "la-double2-event-software",
+  "private": true,
+  "version": "1.0.0",
+  "description": "LA Double2 Event Software marketing site and lead-capture API",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4"
+  }
+}

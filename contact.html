@@ -55,6 +55,7 @@
     --shadow-lg:0 12px 40px rgba(18,33,27,0.10);
     --max:1200px;
     --on-green:#FFFFFF;
+    --danger:#C0392B;
     color-scheme:light;
   }
   @media (prefers-color-scheme: dark){
@@ -70,6 +71,7 @@
       --shadow:0 4px 24px rgba(0,0,0,0.35);
       --shadow-lg:0 12px 40px rgba(0,0,0,0.45);
       --on-green:#0A160F;
+      --danger:#E5776A;
       color-scheme:dark;
     }
   }
@@ -234,6 +236,27 @@
   .map-illustration .i-accent{fill:var(--accent);}
   .map-illustration .i-panel-alt{fill:var(--bg-alt);}
 
+  /* Lead form */
+  .form-card{max-width:720px;margin:0 auto;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:36px;}
+  .form-card h2{font-size:clamp(1.4rem,2.6vw,1.8rem);}
+  .form-sub{margin-top:8px;color:var(--muted);font-size:0.95rem;}
+  #contact-form{margin-top:24px;display:flex;flex-direction:column;gap:18px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:600px){ .form-row{grid-template-columns:1fr;} }
+  #contact-form label{display:flex;flex-direction:column;gap:6px;font-size:0.85rem;font-weight:700;color:var(--text);}
+  #contact-form label span{color:var(--accent);margin-left:2px;}
+  #contact-form input,#contact-form select,#contact-form textarea{
+    font:inherit;padding:10px 12px;border-radius:8px;border:1px solid var(--border);
+    background:var(--bg);color:var(--text);
+  }
+  #contact-form input:focus,#contact-form select:focus,#contact-form textarea:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:var(--green);}
+  #contact-form textarea{resize:vertical;min-height:100px;}
+  .hp-field{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+  .form-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .form-status{font-size:0.88rem;font-weight:600;}
+  .form-status.ok{color:var(--green);}
+  .form-status.err{color:var(--danger);}
+
   /* Tips */
   .tip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px;}
   @media (max-width:840px){ .tip-grid{grid-template-columns:1fr;} }
@@ -310,7 +333,7 @@
           <p class="lang-note">Documents send in all four. Site display language is coming soon.</p>
         </div>
       </div>
-      <a class="btn btn-solid" href="mailto:ld2mall22@gmail.com">Get started</a>
+      <a class="btn btn-solid" href="#lead-form">Get started</a>
       <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer" id="hamburger-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -430,6 +453,71 @@
           <h4>Timeline</h4>
           <p>Whether you want to get started right away or you're still comparing options.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM -->
+  <section id="lead-form" style="padding-top:0;">
+    <div class="wrap">
+      <div class="form-card reveal">
+        <h2>Send an enquiry</h2>
+        <p class="form-sub">Fill this in and it comes straight to us — no account needed.</p>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="cf-name">Name<span aria-hidden="true">*</span>
+              <input type="text" id="cf-name" name="name" required autocomplete="name">
+            </label>
+            <label for="cf-email">Email<span aria-hidden="true">*</span>
+              <input type="email" id="cf-email" name="email" required autocomplete="email">
+            </label>
+          </div>
+          <div class="form-row">
+            <label for="cf-phone">Phone
+              <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+            </label>
+            <label for="cf-venue">Venue type
+              <select id="cf-venue" name="venueType">
+                <option value="">Select one</option>
+                <option>Caterer</option>
+                <option>Banquet hall / event centre</option>
+                <option>Hotel</option>
+                <option>Restaurant / club</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label for="cf-volume">Rough event volume
+              <select id="cf-volume" name="eventVolume">
+                <option value="">Select one</option>
+                <option>1–5 events a month</option>
+                <option>6–15 events a month</option>
+                <option>16–30 events a month</option>
+                <option>30+ events a month</option>
+              </select>
+            </label>
+            <label for="cf-timeline">Timeline
+              <select id="cf-timeline" name="timeline">
+                <option value="">Select one</option>
+                <option>Ready to start now</option>
+                <option>Within a month</option>
+                <option>Just comparing options</option>
+              </select>
+            </label>
+          </div>
+          <label for="cf-message" class="full">Message<span aria-hidden="true">*</span>
+            <textarea id="cf-message" name="message" rows="4" required></textarea>
+          </label>
+          <div class="hp-field" aria-hidden="true">
+            <label for="cf-company">Company</label>
+            <input type="text" id="cf-company" name="company" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-solid btn-lg" id="cf-submit">Send enquiry</button>
+            <span class="form-status" id="cf-status" role="status" aria-live="polite"></span>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -559,6 +647,54 @@
       });
       document.addEventListener('keydown', function(e){
         if(e.key === 'Escape' && !langMenu.hidden){ closeLangMenu(); langBtn.focus(); }
+      });
+    }
+
+    // Contact form
+    var form = document.getElementById('contact-form');
+    if(form){
+      var statusEl = document.getElementById('cf-status');
+      var submitBtn = document.getElementById('cf-submit');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        statusEl.textContent = '';
+        statusEl.className = 'form-status';
+        var data = {
+          name: form.name.value,
+          email: form.email.value,
+          phone: form.phone.value,
+          venueType: form.venueType.value,
+          eventVolume: form.eventVolume.value,
+          timeline: form.timeline.value,
+          message: form.message.value,
+          company: form.company.value,
+          sourcePage: 'contact.html'
+        };
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(function(r){
+          return r.json().catch(function(){ return {}; }).then(function(json){ return { status: r.status, json: json }; });
+        }).then(function(res){
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send enquiry';
+          if(res.status === 200 && res.json.ok){
+            form.reset();
+            statusEl.textContent = "Sent. We'll get back to you shortly.";
+            statusEl.classList.add('ok');
+          } else {
+            statusEl.textContent = (res.json && res.json.error) || 'Something went wrong. Please try again.';
+            statusEl.classList.add('err');
+          }
+        }).catch(function(){
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send enquiry';
+          statusEl.textContent = 'Network error. Please try again.';
+          statusEl.classList.add('err');
+        });
       });
     }
 
