@@ -137,10 +137,29 @@
   nav.primary a:hover{color:var(--green);}
   nav.primary a[aria-current="page"]{color:var(--green);}
   .header-actions{display:flex;align-items:center;gap:12px;}
+  .lang-switch-wrap{position:relative;}
   .lang-switch{
     display:flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--border);
     border-radius:8px;padding:8px 10px;font-size:0.85rem;font-weight:600;color:var(--muted);cursor:pointer;
   }
+  .lang-switch .chevron{transition:transform 0.2s ease;}
+  .lang-switch[aria-expanded="true"] .chevron{transform:rotate(180deg);}
+  .lang-menu{
+    position:absolute;top:calc(100% + 8px);right:0;min-width:210px;
+    background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;
+    box-shadow:var(--shadow-lg);padding:6px;z-index:150;
+  }
+  .lang-menu[hidden]{display:none;}
+  .lang-option{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;
+    padding:9px 10px;border-radius:8px;border:none;background:transparent;
+    font-size:0.88rem;font-weight:600;color:var(--text);text-align:left;cursor:pointer;
+  }
+  .lang-option:hover{background:var(--bg);}
+  .lang-option .check{opacity:0;color:var(--green);flex:none;}
+  .lang-option[aria-checked="true"]{color:var(--green);}
+  .lang-option[aria-checked="true"] .check{opacity:1;}
+  .lang-note{padding:8px 10px 4px;font-size:0.74rem;color:var(--muted);border-top:1px solid var(--border);margin-top:4px;line-height:1.4;}
   .hamburger{display:none;background:transparent;border:1px solid var(--border);border-radius:8px;padding:8px;cursor:pointer;}
   .hamburger svg{display:block;}
 
@@ -283,10 +302,32 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
-      <button class="lang-switch" type="button" aria-haspopup="listbox" aria-label="Change language">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>
-        EN
-      </button>
+      <div class="lang-switch-wrap">
+        <button class="lang-switch" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" id="lang-switch-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>
+          <span class="lang-current">EN</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu" aria-label="Choose language" hidden>
+          <button type="button" role="menuitemradio" aria-checked="true" class="lang-option" data-code="EN">
+            <span>English</span>
+            <svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          </button>
+          <button type="button" role="menuitemradio" aria-checked="false" class="lang-option" data-code="IG">
+            <span>Igbo</span>
+            <svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          </button>
+          <button type="button" role="menuitemradio" aria-checked="false" class="lang-option" data-code="YO">
+            <span>Yoruba</span>
+            <svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          </button>
+          <button type="button" role="menuitemradio" aria-checked="false" class="lang-option" data-code="HA">
+            <span>Hausa</span>
+            <svg class="check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          </button>
+          <p class="lang-note">Documents send in all four. Site display language is coming soon.</p>
+        </div>
+      </div>
       <a class="btn btn-solid" href="contact.html">Get started</a>
       <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer" id="hamburger-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -512,6 +553,51 @@
     document.addEventListener('keydown', function(e){
       if(e.key === 'Escape' && drawer.classList.contains('open')){ closeDrawer(); }
     });
+
+    // Language switcher
+    var langBtn = document.getElementById('lang-switch-btn');
+    var langMenu = document.getElementById('lang-menu');
+    var langCurrent = langBtn ? langBtn.querySelector('.lang-current') : null;
+    if(langBtn && langMenu){
+      var closeLangMenu = function(){
+        langMenu.hidden = true;
+        langBtn.setAttribute('aria-expanded','false');
+      };
+      var openLangMenu = function(){
+        langMenu.hidden = false;
+        langBtn.setAttribute('aria-expanded','true');
+      };
+      var savedLang = null;
+      try{ savedLang = localStorage.getItem('ld2-lang'); }catch(e){}
+      if(savedLang){
+        langMenu.querySelectorAll('.lang-option').forEach(function(opt){
+          var match = opt.getAttribute('data-code') === savedLang;
+          opt.setAttribute('aria-checked', match ? 'true' : 'false');
+          if(match && langCurrent){ langCurrent.textContent = savedLang; }
+        });
+      }
+      langBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        if(langMenu.hidden){ openLangMenu(); } else { closeLangMenu(); }
+      });
+      langMenu.querySelectorAll('.lang-option').forEach(function(opt){
+        opt.addEventListener('click', function(){
+          langMenu.querySelectorAll('.lang-option').forEach(function(o){ o.setAttribute('aria-checked','false'); });
+          opt.setAttribute('aria-checked','true');
+          var code = opt.getAttribute('data-code');
+          if(langCurrent){ langCurrent.textContent = code; }
+          try{ localStorage.setItem('ld2-lang', code); }catch(e){}
+          closeLangMenu();
+          langBtn.focus();
+        });
+      });
+      document.addEventListener('click', function(e){
+        if(!langMenu.hidden && !langMenu.contains(e.target) && e.target !== langBtn){ closeLangMenu(); }
+      });
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape' && !langMenu.hidden){ closeLangMenu(); langBtn.focus(); }
+      });
+    }
 
     // Scroll reveal
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
